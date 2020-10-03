@@ -1,0 +1,33 @@
+CI ที่ update
+01-FI-AP-E CN SUPPLIER NON PO  --< TO 2.9
+01-MM-I Inbound interface ข้อมูล Po GR Return  --< TO 3.1
+01-MM-I Mapping WTS GRN  --< TO 1.6
+01-MM-I Outbound CN Supplier to EDI --< TO 2.5
+01-MM-I APPROVE CN WTS  --< TO 1.3
+01-MM-I Approve CN Zero Qty --< TO 2.2
+01-MM-I Approve CN ยกเลิกขาย WTS --< TO 1.4
+01-MM-IM-I Outbound Purchase from DC --< TO 3.0
+04-MM-I GENERATE MVT. 931 เพื่อดึง STOCK กลับเข้าคลัง  --< TO V.1.1
+01-FI-AP-I Bill Hold Movement  --< TO 1.0
+04-MM-I Inbound Mapping ข้อมูลจากระบบ Web request CN    NEW V.1.0
+01-MM-I-CN Claim IO WMOS	    --< TO 1.2
+01-FI-AR-I-006 AR INVOICE ตั้งหนี้ลูกหนี้ (MAPPING 2 - ลูกหนี้ CLAIM ขนส่ง)  --< 3.0
+01-MM-IM-R Report GRN to Supplier  --< TO 2.5
+01-MM-I โปรแกรมตั้งหนี้เจ้าหนี้ ERS CUSTOMIZED  --< To 2.15
+01-MM-I-PO-2.7
+
+CI ที่ ADD
+
+
+ต้อง Upadate
+01-MM-I DCSALE_24SHOP-1.2
+01-MM-I SHIP DC 2.5			==> Z01MM_MAP _SHIP_DC
+
+09-MM-PR-E CONVERT PO CPALL TO DM
+
+
+
+
+
+
+
