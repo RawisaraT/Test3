@@ -1,0 +1,1422 @@
+REPORT z01mm_i_tp_transport NO STANDARD PAGE HEADING
+                            LINE-SIZE 120
+                            LINE-COUNT 65.
+*======================================================================*
+*  1) Changed by    : PORNPIPAT M.
+*     Changed on    : 18/01/2017
+*     Transport     : DV1K944508 (CP ALL GROUP-2016/07290)
+*     Correction-No : CH-01
+*     Description   : Change Match auto job
+*----------------------------------------------------------------------*
+*   T A B L E S                                                        *
+*----------------------------------------------------------------------*
+TABLES: zmm_tptrs, t001, solisti1.
+
+*----------------------------------------------------------------------*
+*   C O N S T A N T S                                                  *
+*----------------------------------------------------------------------*
+
+
+*----------------------------------------------------------------------*
+*   T Y P E S                                                          *
+*----------------------------------------------------------------------*
+TYPES: BEGIN OF t_tptrs,
+  bukrs  LIKE zmm_tptrs-bukrs,
+  ztrsn  LIKE zmm_tptrs-ztrsn,
+  zdeld  LIKE zmm_tptrs-zdeld,
+  zwhid  LIKE zmm_tptrs-zwhid,
+  lifnr  LIKE zmm_tptrs-lifnr,
+  zcart  LIKE zmm_tptrs-zcart,
+  ztrst  LIKE zmm_tptrs-ztrst,
+  zcycl  LIKE zmm_tptrs-zcycl,
+  zcred  LIKE zmm_tptrs-zcred,
+  zflag(1),
+END OF t_tptrs.
+
+TYPES: BEGIN OF t_tptrf,
+  bukrs  LIKE zmm_tptrf-bukrs,
+  ztrfn  LIKE zmm_tptrf-ztrfn,
+  zdeld  LIKE zmm_tptrf-zdeld,
+  ztrsn  LIKE zmm_tptrf-ztrsn,
+  kostl  LIKE zmm_tptrf-kostl,
+  zwhid  LIKE zmm_tptrf-zwhid,
+  zmatt  LIKE zmm_tptrf-zmatt,
+  zcred  LIKE zmm_tptrf-zcred,
+  zflag(1),
+END OF t_tptrf.
+
+TYPES: BEGIN OF t_txtfile,
+  zwhid  LIKE zmm_tptrs-zwhid,  "Warehouse ID
+  ztrsn  LIKE zmm_tptrs-ztrsn,  "Transport No
+  zdeld  LIKE zmm_tptrs-zcred,  "Delivery Date
+  ztrfn  LIKE zmm_tptrf-ztrfn,  "Transfer No
+  kostl  LIKE zmm_tptrf-kostl,  "Customer ID (Cctr)
+  ztrst  LIKE zmm_tptrs-ztrst,  "Transport Type
+  zmatt  LIKE zmm_tptrf-zmatt,  "Match Type
+  lifnr  LIKE zmm_tptrs-lifnr,  "Vendor ID
+  zcart  LIKE zmm_tptrs-zcart,  "Car Type
+  zflag(1),  " if zflage='X': record is true
+  zmesg(99), " Error Message
+END OF t_txtfile.
+
+TYPES: BEGIN OF t_line,
+         line(255),
+       END OF t_line.
+
+*-----------------------------------------------------------------------
+*   D A T A && I N T E R N A L   T A B L E S
+*-----------------------------------------------------------------------
+DATA: i_tab TYPE TABLE OF t_line WITH HEADER LINE,    "data from file
+      i_mail TYPE TABLE OF t_line WITH HEADER LINE,
+      i_txt TYPE TABLE OF t_txtfile WITH HEADER LINE, "separate i_tab
+      i_chk TYPE TABLE OF t_txtfile WITH HEADER LINE, "each file
+      i_arc TYPE TABLE OF t_txtfile WITH HEADER LINE, "all file
+      i_all_tps TYPE TABLE OF t_tptrs WITH HEADER LINE,
+      i_all_tpf TYPE TABLE OF t_tptrf WITH HEADER LINE.
+
+DATA: i_tps LIKE zmm_tptrs OCCURS 0 WITH HEADER LINE,
+      i_tpf LIKE zmm_tptrf OCCURS 0 WITH HEADER LINE.
+
+*Begin Thanawut
+DATA: i_tps2 LIKE zmm_tptrs OCCURS 0 WITH HEADER LINE,
+      i_tpf2 LIKE zmm_tptrf OCCURS 0 WITH HEADER LINE.
+*End Thanawut
+
+DATA: BEGIN OF i_vendor OCCURS 0,
+      lifnr LIKE lfa1-lifnr,
+      sort2 LIKE adrc-sort2,
+END OF i_vendor.
+
+DATA: BEGIN OF i_cost OCCURS 0,
+      kostl  LIKE csks-kostl,
+      stras  LIKE csks-stras, "street
+      pstlz  LIKE csks-pstlz, "Postal Code
+END OF i_cost.
+
+DATA: BEGIN OF i_branch OCCURS 0,
+      branch LIKE j_1bbranch-branch,
+END OF i_branch.
+
+DATA: BEGIN OF it_fname OCCURS 0,
+         name(255),
+         file LIKE sxpgcolist-parameters,
+END OF it_fname.
+
+DATA: filename(128),
+      count_succ TYPE i,  "count success record
+      count_dup TYPE i,  "count duplicate record
+      count_fail TYPE i,  "count fail record
+      count_read TYPE i VALUE 0,  "count reading loop
+      car_no TYPE i VALUE 1.
+
+*----------------------------------------------------------------------*
+*   D E F I N E   S E R V E R   P A T H                                *
+*----------------------------------------------------------------------*
+DATA: file     LIKE sxpgcolist-parameters.
+DATA: t_path   LIKE sxpgcolist-parameters.
+DATA: c_event  LIKE zfi_event-event VALUE 'MMIT1'.
+
+*-----------------------------------------------------------------------
+* SELECTION-SCREEN
+*-----------------------------------------------------------------------
+SELECTION-SCREEN BEGIN OF BLOCK blk0 WITH FRAME.
+SELECTION-SCREEN COMMENT 30(28) text-000.
+SELECTION-SCREEN END OF BLOCK blk0.
+
+SELECTION-SCREEN BEGIN OF BLOCK blk1 WITH FRAME TITLE text-001.
+PARAMETERS: p_bukrs LIKE t001-bukrs OBLIGATORY MEMORY ID buk.
+SELECTION-SCREEN END OF BLOCK blk1.
+
+SELECTION-SCREEN BEGIN OF BLOCK blk2 WITH FRAME TITLE text-002.
+PARAMETERS: p_event(5) OBLIGATORY DEFAULT c_event.
+SELECTION-SCREEN SKIP.
+SELECTION-SCREEN BEGIN OF BLOCK blk3 WITH FRAME TITLE text-003.
+SELECT-OPTIONS: so_zwhid FOR zmm_tptrs-zwhid.
+SELECTION-SCREEN END OF BLOCK blk3.
+SELECTION-SCREEN END OF BLOCK blk2.
+
+SELECTION-SCREEN BEGIN OF BLOCK blk4 WITH FRAME TITLE text-004.
+SELECT-OPTIONS: p_mail FOR sy-uname DEFAULT sy-uname OBLIGATORY,
+                p_exmail FOR solisti1.
+SELECTION-SCREEN END OF BLOCK blk4.
+
+SELECTION-SCREEN BEGIN OF BLOCK blk5 WITH FRAME TITLE text-005.
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS: p_unix RADIOBUTTON GROUP file
+                        USER-COMMAND file DEFAULT 'X'.
+SELECTION-SCREEN COMMENT 5(10) text-s01.
+SELECTION-SCREEN END OF LINE.
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS: p_file RADIOBUTTON GROUP file.
+SELECTION-SCREEN COMMENT 5(10) text-s02.
+PARAMETERS: pa_file TYPE text132 MODIF ID loc.
+SELECTION-SCREEN END OF LINE.
+SELECTION-SCREEN END OF BLOCK blk5.
+
+*----------------------------------------------------------------------*
+*   I N C L U D E S                                                    *
+*----------------------------------------------------------------------*
+INCLUDE zfi_i_interface_data.
+INCLUDE zfi_i_batch_routine.
+
+*----------------------------------------------------------------------*
+*                     I N I T I A L I Z A T I O N .
+*----------------------------------------------------------------------*
+INITIALIZATION.
+
+
+*----------------------------------------------------------------------*
+*                    S T A R T - O F - S E L E C T I O N               *
+*----------------------------------------------------------------------*
+START-OF-SELECTION.
+  PERFORM get_text.
+  PERFORM load_master.    "load vendor, cost center
+
+
+* Local PC
+*----------------------------------------------------------------------*
+  IF p_file = 'X'.
+    PERFORM upload_data_to_itab TABLES i_tab USING pa_file.
+    IF err_flag = '0'.
+      PERFORM load_all_transport.
+      PERFORM generate_data.
+      PERFORM insert_db.
+      PERFORM write_summary_report.
+      PERFORM write_error_report.
+      PERFORM gen_mail.
+    ENDIF.
+
+
+* UNIX FILE
+*----------------------------------------------------------------------*
+  ELSE.
+
+    PERFORM get_inbound_filename.
+    LOOP AT it_fname.
+      MOVE it_fname-name TO filename.
+      MOVE it_fname-file TO file.
+
+      CLEAR i_tab[].
+      CLEAR i_chk[].
+      CLEAR i_tps[].
+      CLEAR i_tpf[].
+      count_succ = 0.
+
+      PERFORM upload_data_unix TABLES i_tab USING file.
+
+      IF err_flag = '0'.
+        PERFORM load_all_transport.
+        PERFORM generate_data.
+        PERFORM insert_db.
+        PERFORM archive_file USING file.
+        PERFORM write_summary_report.
+        PERFORM write_error_report.
+        PERFORM gen_mail.
+      ENDIF.
+
+      count_read = count_read + 1.
+
+    ENDLOOP.
+  ENDIF.
+
+  PERFORM send_mail.
+
+
+*----------------------------------------------------------------------*
+*                   E N D - O F - S E L E C T I O N                    *
+*----------------------------------------------------------------------*
+END-OF-SELECTION.
+
+
+*----------------------------------------------------------------------*
+*                         T O P - O F - P A G E                        *
+*----------------------------------------------------------------------*
+TOP-OF-PAGE.
+
+
+************************************************************************
+* SELECTION-SCREEN
+************************************************************************
+AT SELECTION-SCREEN OUTPUT.
+  LOOP AT SCREEN.
+    CASE screen-group1.
+      WHEN 'LOC'.
+        IF p_file IS INITIAL.
+          screen-input = '0'.
+        ENDIF.
+    ENDCASE.
+    MODIFY SCREEN.
+  ENDLOOP.
+
+
+AT SELECTION-SCREEN ON p_bukrs.
+  SELECT SINGLE * FROM t001
+    WHERE bukrs = p_bukrs.
+  IF sy-subrc NE 0.
+    MESSAGE e000(38) WITH 'Company code' p_bukrs ' does not exist.'.
+  ENDIF.
+
+
+AT SELECTION-SCREEN ON VALUE-REQUEST FOR pa_file.
+  CALL FUNCTION 'WS_FILENAME_GET'
+    EXPORTING
+      def_path         = 'C:\'
+      mask             = '*.*,*.txt,*.txt.'
+      mode             = 'O'
+    IMPORTING
+      filename         = pa_file
+    EXCEPTIONS
+      inv_winsys       = 1
+      no_batch         = 2
+      selection_cancel = 3
+      selection_error  = 4
+      OTHERS           = 5.
+  IF sy-subrc NE 0.
+    IF NOT sy-msgty IS INITIAL.
+      MESSAGE ID sy-msgid TYPE sy-msgty NUMBER sy-msgno
+              WITH sy-msgv1 sy-msgv2 sy-msgv3 sy-msgv4.
+    ENDIF.
+  ENDIF.
+
+
+*&---------------------------------------------------------------------*
+*&      Form  get_text
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM get_text.
+  DEFINE upload_file_local.
+*"<<UPGECC6 SATHENAK UCCHECK
+*    call function 'WS_UPLOAD'
+*         exporting
+*              filename                = &1
+*              filetype                = &2
+*         tables
+*              data_tab                = &3
+*         exceptions
+*              file_open_error         = 1
+*              file_read_error         = 2
+*              no_batch                = 3
+*              gui_refuse_filetransfer = 4
+*              others                  = 5.
+    data: l_fname type string,
+          l_ftype type char10.
+    move &1 to l_fname.
+    move &2 to l_ftype.
+
+    call function 'GUI_UPLOAD'
+      EXPORTING
+        filename                = l_fname
+        filetype                = l_ftype
+      TABLES
+        data_tab                = &3
+      EXCEPTIONS
+        file_open_error         = 1
+        file_read_error         = 2
+        no_batch                = 3
+        gui_refuse_filetransfer = 4
+        invalid_type            = 5
+        no_authority            = 6
+        unknown_error           = 7
+        bad_data_format         = 8
+        header_not_allowed      = 9
+        separator_not_allowed   = 10
+        header_too_long         = 11
+        unknown_dp_error        = 12
+        access_denied           = 13
+        dp_out_of_memory        = 14
+        disk_full               = 15
+        dp_timeout              = 16
+        others                  = 17.
+
+
+
+    if sy-subrc <> 0.
+      message e000(38) with 'Error uploading file' &1.
+    endif.
+  END-OF-DEFINITION.
+ENDFORM.                    " get_text
+*&---------------------------------------------------------------------*
+*&      Form  upload_data_to_itab
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*      -->P_I_TAB  text
+*      -->P_PA_FILE  text
+*----------------------------------------------------------------------*
+FORM upload_data_to_itab TABLES   p_table
+                         USING    p_pc_file.
+  DATA: file_name TYPE rlgrap-filename.
+
+  MOVE p_pc_file TO t_path.
+  MOVE p_pc_file TO file.
+
+  file_name = p_pc_file.
+  IF file_name IS INITIAL.
+    MOVE 'Input File does not exist' TO prg_message.
+    PERFORM call_ws_message USING 'I' prg_message 'Information'.
+    err_flag = '2'.
+
+    PERFORM write_summary_report.
+    PERFORM gen_mail.
+
+    WRITE: / '** Failed **' COLOR 6 INVERSE.
+    ULINE.
+    WRITE: / 'Error! File not found'.
+    ULINE.
+
+  ENDIF.
+  CHECK err_flag = '0'.
+  upload_file_local file_name 'ASC' p_table.
+
+  LOOP AT p_table.
+    IF p_table IS INITIAL.
+      DELETE p_table.
+    ENDIF.
+  ENDLOOP.
+
+ENDFORM.                    " upload_data_to_itab
+*&---------------------------------------------------------------------*
+*&      Form  upload_data_unix
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*      -->P_I_TAB  text
+*      -->P_PA_FILE  text
+*----------------------------------------------------------------------*
+FORM upload_data_unix  TABLES   p_table
+                       USING    p_file.
+
+***open file
+  PERFORM open_file USING p_file 'INPUT' CHANGING err_flag.
+  IF err_flag <> 0 .
+    PERFORM write_summary_report.
+    PERFORM gen_mail.
+
+    WRITE: /(200) p_file,
+           / '** Failed **' COLOR 6 INVERSE.
+    ULINE.
+    WRITE: / 'Error! File permission failed'.
+    ULINE.
+
+  ENDIF.
+  CHECK err_flag = '0'.
+
+  eof_flag = 'A'.
+
+***transfer records
+  WHILE eof_flag = 'A'.
+
+    READ DATASET p_file INTO p_table.  " LENGTH G_LEN.
+    IF sy-subrc NE 0.
+      eof_flag = 'Y'.
+      IF p_table[] IS INITIAL.           "Check no data
+        MOVE 'No data in input file.'
+                                      TO prg_message.
+        PERFORM call_ws_message USING 'I' prg_message 'Information'.
+        err_flag = '9'.
+      ENDIF.
+      EXIT.
+    ELSE.
+      APPEND p_table.
+    ENDIF.
+
+  ENDWHILE.
+
+***close file
+  PERFORM close_file USING p_file.
+
+  LOOP AT p_table.
+    IF p_table IS INITIAL.
+      DELETE p_table.
+    ENDIF.
+  ENDLOOP.
+
+  IF NOT p_table[] IS INITIAL.
+    CONCATENATE  '|Material  |Material Description                    |'
+                                                'Matgroup  |Old mat.  |'
+                                                   'Plant|Sloc.|Type  |'
+                                                        INTO prg_message.
+    PERFORM call_ws_message USING 'I' prg_message 'Status.'.
+
+  ENDIF.
+
+ENDFORM.                    " upload_data_unix
+
+
+*---------------------------------------------------------------------*
+*       FORM GET_INBOUND_FILENAME                                     *
+*---------------------------------------------------------------------*
+*       ........                                                      *
+*---------------------------------------------------------------------*
+*  -->  P_EVENT                                                       *
+*  -->  P_FILE                                                        *
+*---------------------------------------------------------------------*
+FORM get_inbound_filename.
+
+  DATA: w_lines TYPE i.
+
+  CASE sy-sysid.
+    WHEN 'DV1'.
+      CONCATENATE '/usr/sap/' sy-sysid '/DVEBMGS00'
+                   '/work/' sy-mandt INTO t_path.
+    WHEN 'QA1'.
+      CONCATENATE '/usr/sap/' sy-sysid '/DVEBMGS01'
+                   '/work/' sy-mandt INTO t_path.
+    WHEN 'PR1'.
+      CONCATENATE '/usr/sap/' sy-sysid '/DVEBMGS02'
+                   '/work/' sy-mandt INTO t_path.
+  ENDCASE.
+  CONCATENATE t_path '/interface/inbound/' p_bukrs '/' c_event
+                                                          INTO t_path.
+  MOVE t_path TO file.
+
+  CLEAR it_fname[].
+  CALL 'C_DIR_READ_START' ID 'DIR' FIELD file.
+  DO.
+    CALL 'C_DIR_READ_NEXT' ID 'NAME' FIELD it_fname-name.
+
+    IF sy-subrc <> 0.
+      EXIT.
+    ELSE.
+      IF it_fname-name CA
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.
+        IF so_zwhid IS INITIAL.
+          APPEND it_fname.
+        ELSE.
+          LOOP AT so_zwhid.
+            IF it_fname-name CS so_zwhid-low.
+              APPEND it_fname.
+            ENDIF.
+          ENDLOOP.
+        ENDIF.
+      ENDIF.
+    ENDIF.
+  ENDDO.
+  CALL 'C_DIR_READ_FINISH'.
+
+  DESCRIBE TABLE it_fname LINES w_lines.
+  IF w_lines = 0.
+    MOVE 'Input File does not exist' TO prg_message.
+    PERFORM call_ws_message USING 'I' prg_message 'Information'.
+    err_flag = '2'.
+
+    PERFORM write_summary_report.
+    PERFORM gen_mail.
+
+    WRITE: / '** Failed **' COLOR 6 INVERSE.
+    ULINE.
+    WRITE: / 'Error! File not found'.
+    ULINE.
+  ENDIF.
+
+  CHECK err_flag = '0'.
+  SORT it_fname BY name.
+
+  LOOP AT it_fname.
+    CONCATENATE file '/' it_fname-name INTO it_fname-file.
+    MODIFY it_fname.
+  ENDLOOP.
+
+*  READ TABLE it_fname INDEX 1.
+*  MOVE it_fname-name TO filename.
+*  MOVE it_fname-file TO file.
+
+
+ENDFORM.                    " get_inbound_filename
+
+*&---------------------------------------------------------------------*
+*&      Form  generate_data
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM generate_data.
+  DATA: lv_num    TYPE i,
+        lv_total  TYPE i,
+        lv_line(300),
+        lv_err(1),      "error by record
+        lv_zerr(1),     "error by transport no
+        lv_message(99),
+        wa_txt LIKE LINE OF i_txt,
+        wa_txt2 LIKE LINE OF i_txt,
+        lv_lifnr LIKE adrc-sort2,
+        lv_ztrsn LIKE zmm_tptrs-ztrsn.
+  DATA: lv_ktext LIKE cskt-ktext.
+
+  car_no = 1.
+  count_succ = 0.
+  count_dup = 0.
+  CLEAR i_chk[].
+  CLEAR i_txt[].
+
+  IF i_tab[] IS INITIAL.
+    err_flag = '1'.
+    i_tab-line = 'Error! Data not found'.
+    APPEND i_tab.
+  ELSE.
+*>> Count line in i_tab and delete total record in lastest line
+    DESCRIBE TABLE i_tab LINES lv_num.          "num line in table
+    READ TABLE i_tab INDEX lv_num INTO lv_line.
+    lv_total = lv_line+10(7).                     "get total record
+    DELETE i_tab INDEX lv_num.                  "delete last line
+    lv_num = lv_num - 1.
+
+    IF lv_num NE lv_total.
+      CLEAR i_tab[].
+      err_flag = '1'.
+      i_tab-line = 'Error! File not complete'.
+      APPEND i_tab.
+    ELSE.
+
+*---------------------------------------------------------------------
+*>>   1) Separate i_tab to internal table
+*---------------------------------------------------------------------
+      LOOP AT i_tab.
+        CLEAR i_txt.
+        i_txt-zwhid = i_tab+4(4).    "Warehouse ID
+        i_txt-ztrsn = i_tab+8(10).   "Transport No
+        i_txt-ztrst = i_tab+18(2).   "Transport Type
+        i_txt-ztrfn = i_tab+20(10).  "Transfer No
+        i_txt-zmatt = i_tab+30(3).   "Match Type
+        i_txt-kostl = i_tab+33(5).   "Customer ID
+        i_txt-lifnr = i_tab+38(5).   "Vendor Code
+        i_txt-zcart = i_tab+43(2).   "Car Type
+        CONCATENATE i_tab+51(4) i_tab+48(2) i_tab+45(2)
+          INTO i_txt-zdeld.          "Delivery Date YYYYMMDD
+        APPEND i_txt.
+      ENDLOOP.
+
+
+*---------------------------------------------------------------------
+*>>   2) Verify data in i_txt before expand in each internal table
+*---------------------------------------------------------------------
+      SORT i_all_tps BY bukrs ztrsn zdeld.
+      SORT i_branch  BY branch.
+      SORT i_vendor  BY sort2.
+      SORT i_all_tpf BY bukrs ztrsn zdeld ztrfn kostl.
+      SORT i_txt BY zwhid ztrsn zdeld ztrfn.
+      LOOP AT i_txt INTO wa_txt2.
+        wa_txt = wa_txt2.
+        lv_err = ''.
+        lv_message = ''.
+*---------------------------------------------------------------------
+*       2.1) checking data W/H No, Vendor
+*---------------------------------------------------------------------
+        CLEAR i_chk.
+        AT NEW zdeld.
+          lv_zerr = ''.
+        ENDAT.
+        i_chk-ztrsn = wa_txt-ztrsn.   "Transport No.
+        i_chk-zdeld = wa_txt-zdeld.   "Delivery Date
+        i_chk-zcart = wa_txt-zcart.   "Car Type
+        i_chk-ztrst = wa_txt-ztrst.   "Transport Type
+        i_chk-zwhid = wa_txt-zwhid.   "Warehouse
+*=        check exist record in zmm_tptrs
+        PERFORM exist_zmm_tptrs
+                    USING
+                       i_chk-ztrsn
+                       i_chk-zdeld
+                    CHANGING
+                       lv_err.
+
+        IF lv_err = 'D'.
+          IF lv_message EQ space.
+            lv_zerr = 'D'.
+            lv_message = 'Warning! Record exist in table'.
+          ENDIF.
+        ENDIF.
+
+*=        check <Warehouse id>
+        PERFORM get_warehouse
+                    USING
+                       wa_txt-zwhid
+                    CHANGING
+                       lv_err.
+
+        IF lv_err = 'X'.
+*          IF lv_message EQ space.
+          lv_zerr = 'X'.
+          lv_message = 'Error! Warehouse ID not found'.
+*          ENDIF.
+        ENDIF.
+
+*=        check <Vedor code>
+        lv_lifnr = wa_txt-lifnr.         "Vendor (term 2)
+        PERFORM get_vendor
+                    USING
+                       lv_lifnr
+                    CHANGING
+                       i_chk-lifnr.      "Vendor code
+
+        IF i_chk-lifnr EQ space.
+          lv_err = 'X'.                "flag skip loop
+          i_chk-lifnr = wa_txt-lifnr.
+*          IF lv_message EQ space.
+          lv_zerr = 'X'.
+          lv_message = 'Error! Vendor not found'.
+*          ENDIF.
+        ENDIF.
+*        ENDAT.
+
+*---------------------------------------------------------------------
+*       2.2) checking Cost center
+*---------------------------------------------------------------------
+        i_chk-ztrfn = wa_txt-ztrfn.    "Transfer No
+        i_chk-zmatt = wa_txt-zmatt.    "Match Type
+
+        CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'
+          EXPORTING
+            input  = wa_txt-kostl
+          IMPORTING
+            output = i_chk-kostl.
+
+
+*        i_chk-kostl = wa_txt-kostl.    "Cost center
+
+*=      check exist record in zmm_tptrf
+        PERFORM exist_zmm_tptrf
+                    USING
+                       wa_txt-ztrsn
+                       wa_txt-zdeld
+                       wa_txt-ztrfn
+                       i_chk-kostl
+                    CHANGING
+                       lv_err.
+
+        IF lv_err = 'D'.
+          IF lv_message EQ space.
+            lv_zerr = 'D'.
+            lv_message = 'Warning! Record exist in table'.
+          ENDIF.
+        ENDIF.
+
+*=      check <Cost center> active
+*        PERFORM exist_costcenter
+*                    USING
+*                       i_chk-kostl
+*                    CHANGING
+*                       lv_err.
+*
+*        IF lv_err = 'X'.
+*          IF lv_message EQ space.
+*            lv_zerr = 'X'.
+*            lv_message = 'Error! Cost Center not found'.
+*          ENDIF.
+*        ENDIF.
+
+        i_chk-zmesg = lv_message.
+        APPEND i_chk.
+
+*---------------------------------------------------------------------
+*       2.3) Flag 'X' if condition not error
+*---------------------------------------------------------------------
+*        AT END OF zdeld.
+*          IF lv_zerr NE 'X'.
+*            wa_txt-zflag = 'X'.
+*            MODIFY i_chk FROM wa_txt
+*                          TRANSPORTING zflag
+*                          WHERE zwhid = wa_txt-zwhid
+*                            AND ztrsn = wa_txt-ztrsn
+*                            AND zdeld = wa_txt-zdeld.
+*          ENDIF.
+*        ENDAT.
+*      ENDLOOP.
+*Begin Thanawut
+        AT END OF zdeld.
+          IF lv_zerr EQ ''.
+            wa_txt-zflag = 'X'.
+            MODIFY i_chk FROM wa_txt
+                          TRANSPORTING zflag
+                          WHERE zwhid = wa_txt-zwhid
+                            AND ztrsn = wa_txt-ztrsn
+                            AND zdeld = wa_txt-zdeld.
+
+          ELSEIF lv_zerr EQ 'D'.
+            wa_txt-zflag = 'D'.
+            MODIFY i_chk FROM wa_txt
+                          TRANSPORTING zflag
+                          WHERE zwhid = wa_txt-zwhid
+                            AND ztrsn = wa_txt-ztrsn
+                            AND zdeld = wa_txt-zdeld.
+          ENDIF.
+        ENDAT.
+      ENDLOOP.
+*End Thanawut
+
+*---------------------------------------------------------------------
+*>>   3) Delete Duplicate record in i_chk
+*---------------------------------------------------------------------
+      SORT i_chk BY zwhid ztrsn zdeld ztrfn kostl.
+      DELETE ADJACENT DUPLICATES FROM i_chk
+            COMPARING zwhid ztrsn zdeld ztrfn kostl.
+
+
+*---------------------------------------------------------------------
+*>>   4) Extract i_chk (zflag = 'X') to each internal table
+*---------------------------------------------------------------------
+      CLEAR wa_txt2.
+      CLEAR wa_txt.
+      SORT i_chk BY zwhid ztrsn zdeld ztrfn kostl.
+      LOOP AT i_chk INTO wa_txt2 WHERE zflag = 'X'.
+        wa_txt = wa_txt2.
+*---------------------------------------------------------------------
+*       4.1) Grouping data W/H No, Transport No, Delivery Date
+*---------------------------------------------------------------------
+        AT NEW zdeld.
+          CLEAR i_tps.
+          i_tps-bukrs = p_bukrs.
+          i_tps-ztrsn = wa_txt-ztrsn.   "Transport No
+          i_tps-zdeld = wa_txt-zdeld.   "Delivery Date
+          i_tps-zwhid = wa_txt-zwhid.   "Warehouse id
+          i_tps-lifnr = wa_txt-lifnr.   "Vendor
+          i_tps-zcart = wa_txt-zcart.   "Car Type
+          i_tps-ztrst = wa_txt-ztrst.   "Transport Type
+          i_tps-zcred = sy-datum.       "Create Date
+
+          i_tps-zstam = 'X'.    "CH-01 PORNPMEE
+          i_tps-zmatd = sy-datum. "CH-01 PORNPMEE
+
+*=        get <Transport Cycle> from Delivery Date
+          IF wa_txt-zdeld+6(2) LE 15.
+            CONCATENATE '01-15' wa_txt-zdeld+4(2) wa_txt-zdeld+0(4)
+            INTO i_tps-zcycl.
+          ELSE.
+            CONCATENATE '16-31' wa_txt-zdeld+4(2) wa_txt-zdeld+0(4)
+            INTO i_tps-zcycl.
+          ENDIF.
+
+*=        Append i_tps
+          APPEND i_tps.
+
+        ENDAT.
+
+*---------------------------------------------------------------------
+*       4.2) insert into i_tpf
+*---------------------------------------------------------------------
+        CLEAR i_tpf.
+
+        i_tpf-bukrs = p_bukrs.
+        i_tpf-ztrsn = wa_txt-ztrsn.    "Transpost No
+        i_tpf-zdeld = wa_txt-zdeld.    "Delivery Date
+        i_tpf-ztrfn = wa_txt-ztrfn.    "Transfer No
+        i_tpf-kostl = wa_txt-kostl.    "Customer ID
+        i_tpf-zwhid = i_tps-zwhid.     "Warehouse ID
+        i_tpf-zmatt = wa_txt-zmatt.    "Match Type
+        i_tpf-zcred = sy-datum.        "Create Date
+
+        i_tpf-zstam = 'X'.    "CH-01 PORNPMEE
+        i_tpf-zmatd = sy-datum. "CH-01 PORNPMEE
+*=      Append i_tpf
+        APPEND i_tpf.
+
+        count_succ = count_succ + 1.
+      ENDLOOP.
+*Begin Thanawut
+      CLEAR wa_txt2.
+      CLEAR wa_txt.
+      LOOP AT i_chk INTO wa_txt2 WHERE zflag = 'D'.
+        wa_txt = wa_txt2.
+
+        AT NEW zdeld.
+          CLEAR i_tps2.
+          i_tps2-bukrs = p_bukrs.
+          i_tps2-ztrsn = wa_txt-ztrsn.   "Transport No
+          i_tps2-zdeld = wa_txt-zdeld.   "Delivery Date
+          i_tps2-zwhid = wa_txt-zwhid.   "Warehouse id
+          i_tps2-lifnr = wa_txt-lifnr.   "Vendor
+          i_tps2-zcart = wa_txt-zcart.   "Car Type
+          i_tps2-ztrst = wa_txt-ztrst.   "Transport Type
+          i_tps2-zcred = sy-datum.       "Create Date
+
+          i_tps2-zstam = 'X'.    "CH-01 PORNPMEE
+          i_tps2-zmatd = sy-datum. "CH-01 PORNPMEE
+
+*=        get <Transport Cycle> from Delivery Date
+          IF wa_txt-zdeld+6(2) LE 15.
+            CONCATENATE '01-15' wa_txt-zdeld+4(2) wa_txt-zdeld+0(4)
+            INTO i_tps2-zcycl.
+          ELSE.
+            CONCATENATE '16-31' wa_txt-zdeld+4(2) wa_txt-zdeld+0(4)
+            INTO i_tps2-zcycl.
+          ENDIF.
+
+*=        Append i_tps
+          APPEND i_tps2.
+
+        ENDAT.
+
+        CLEAR i_tpf2.
+
+        i_tpf2-bukrs = p_bukrs.
+        i_tpf2-ztrsn = wa_txt-ztrsn.    "Transpost No
+        i_tpf2-zdeld = wa_txt-zdeld.    "Delivery Date
+        i_tpf2-ztrfn = wa_txt-ztrfn.    "Transfer No
+        i_tpf2-kostl = wa_txt-kostl.    "Customer ID
+        i_tpf2-zwhid = i_tps2-zwhid.     "Warehouse ID
+        i_tpf2-zmatt = wa_txt-zmatt.    "Match Type
+        i_tpf2-zcred = sy-datum.        "Create Date
+
+        i_tpf2-zstam = 'X'.    "CH-01 PORNPMEE
+        i_tpf2-zmatd = sy-datum. "CH-01 PORNPMEE
+
+        APPEND i_tpf2.
+        count_dup = count_dup + 1.
+      ENDLOOP.
+*End Thanawut
+    ENDIF.
+  ENDIF.
+
+ENDFORM.                    " generate_data
+*&---------------------------------------------------------------------*
+*&      Form  exist_ZMM_TPTRS
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM exist_zmm_tptrs USING    p_ztrsn
+                              p_zdeld
+                     CHANGING p_err.
+
+  READ TABLE i_all_tps WITH KEY bukrs = p_bukrs
+                                ztrsn = p_ztrsn
+                                zdeld = p_zdeld
+                       BINARY SEARCH.
+  IF sy-subrc EQ 0.
+    p_err = 'D'.
+  ENDIF.
+
+ENDFORM.                    " exist_ZMM_TPTRS
+
+*&---------------------------------------------------------------------*
+*&      Form  exist_ZMM_TPTRF
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM exist_zmm_tptrf USING    p_ztrsn
+                              p_zdeld
+                              p_ztrfn
+                              p_kostl
+                     CHANGING p_err.
+
+  READ TABLE i_all_tpf WITH KEY bukrs = p_bukrs
+                                ztrsn = p_ztrsn
+                                zdeld = p_zdeld
+                                ztrfn = p_ztrfn
+                                kostl = p_kostl
+                       BINARY SEARCH.
+  IF sy-subrc EQ 0.
+    p_err = 'D'.
+  ENDIF.
+
+ENDFORM.                    " exist_ZMM_TPTRF
+*&---------------------------------------------------------------------*
+*&      Form  write_summary_report
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM write_summary_report.
+  DATA: lv_num TYPE i.
+
+  DESCRIBE TABLE i_chk LINES lv_num.
+* Begin Thanawut
+  count_fail = lv_num - count_succ - count_dup.
+* End Thanawut
+  IF count_read = 0.
+    WRITE: / 'PROGRAM     : ', sy-repid.
+    WRITE: / 'DATE / TIME : ', (11) sy-datum, sy-uzeit.
+    WRITE: / 'RUN BY      : ', sy-uname.
+    WRITE: / 'FILE NAME   : ', (99) t_path, 150 ' '.
+    ULINE.
+  ENDIF.
+
+  SKIP.
+  IF err_flag = '0'.
+    WRITE: /(30) 'Total Success Transfer : ' RIGHT-JUSTIFIED COLOR 5,
+            (10)  count_succ.
+* Begin Thanawut
+    WRITE: /(30) 'Total Update Transfer : ' RIGHT-JUSTIFIED COLOR 7,
+            (10)  count_dup.
+* End Thanawut
+    WRITE: /(30) 'Total Error Transfer : ' RIGHT-JUSTIFIED COLOR 6,
+            (10)  count_fail.
+    SKIP.
+  ENDIF.
+
+ENDFORM.                    " write_summary_report
+
+*&---------------------------------------------------------------------*
+*&      Form  write_error_report
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM write_error_report.
+  DATA: lv_count TYPE i.
+*Begin Thanawut
+  IF ( ( count_succ GT 0 ) OR ( count_dup GT 0 ) ) AND ( count_fail EQ 0 ).
+    WRITE: /(200) file,
+           / '** Success **' COLOR 5 INVERSE.
+    ULINE.
+
+*  ELSEIF ( count_succ EQ 0 ) OR ( count_dup EQ 0 ) AND ( count_fail EQ 0 ).
+*    WRITE: /(200) file,
+*           / '** Failed **' COLOR 6 INVERSE.
+*    READ TABLE itab INDEX 1.
+*    WRITE: / i_tab-line.
+*    ULINE.
+* End Thanawut
+  ELSEIF count_fail GT 0.
+    WRITE: /(200) file,
+           / '** Failed **' COLOR 6 INVERSE.
+
+    FORMAT COLOR 3.
+    WRITE : /(5) 'NO.',
+             (5) 'W/H',
+             (11) 'Transport',
+             (11) 'Deliv.date',
+             (11) 'Transfer',
+             (6) 'CCtr.',
+             (3) 'Typ',
+             (4) 'Matc',
+             (8) 'Vendor',
+             (3) 'Car',
+*             (1) 'F',
+             (30) 'Message',
+             120 ''.
+    ULINE.
+    FORMAT COLOR 1.
+    LOOP AT i_chk WHERE zflag <> 'X'.
+      lv_count = lv_count + 1.
+*    LOOP AT i_chk.
+      WRITE : /(5) lv_count,
+               (5) i_chk-zwhid,
+               (11) i_chk-ztrsn,
+               (11) i_chk-zdeld,
+               (11) i_chk-ztrfn,
+               (6) i_chk-kostl,
+               (3) i_chk-ztrst,
+               (4) i_chk-zmatt,
+               (8) i_chk-lifnr,
+               (3) i_chk-zcart,
+*               (1) i_chk-zflag,
+               (40) i_chk-zmesg.
+    ENDLOOP.
+    ULINE.
+    FORMAT RESET.
+  ENDIF.
+ENDFORM.                    " write_error_report
+
+*&---------------------------------------------------------------------*
+*&      Form  load_all_transport
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM load_all_transport.
+
+*>>TABLE ZMM_TPTRS
+  SELECT bukrs ztrsn zdeld zwhid lifnr
+  INTO CORRESPONDING FIELDS OF TABLE i_all_tps
+    FROM zmm_tptrs
+    WHERE bukrs EQ p_bukrs
+    AND   zwhid IN so_zwhid.
+
+*>>TABLE ZMM_TPTRF
+  SELECT bukrs ztrsn zdeld ztrfn kostl zwhid
+  INTO CORRESPONDING FIELDS OF TABLE i_all_tpf
+    FROM zmm_tptrf
+    WHERE bukrs EQ p_bukrs
+    AND   zwhid IN so_zwhid.
+
+
+ENDFORM.                    " load_all_transport
+*&---------------------------------------------------------------------*
+*&      Form  insert_db
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM insert_db.
+  DATA: wa_tps LIKE LINE OF i_tps,
+        wa_tpf LIKE LINE OF i_tpf.
+  DATA: zflag(1),
+        lv_num TYPE i.
+*---------------------------------------------------------------------
+*>>   Insert to TABLE ZMM_TPTRS, ZMM_TPTRF
+*---------------------------------------------------------------------
+  IF ( NOT i_tps[] IS INITIAL ) AND ( NOT i_tpf[] IS INITIAL ).
+    INSERT zmm_tptrs FROM TABLE i_tps.
+    IF sy-subrc EQ 0.
+      COMMIT WORK.
+    ELSE.
+      ROLLBACK WORK.
+    ENDIF.
+
+    INSERT zmm_tptrf FROM TABLE i_tpf.
+    IF sy-subrc EQ 0.
+      COMMIT WORK.
+    ELSE.
+      ROLLBACK WORK.
+    ENDIF.
+
+  ENDIF.
+*Begin Thanawut
+  IF ( NOT i_tps2[] IS INITIAL ) AND ( NOT i_tpf2[] IS INITIAL ).
+    MODIFY zmm_tptrs FROM TABLE i_tps2.
+    IF sy-subrc EQ 0.
+      COMMIT WORK.
+    ELSE.
+      ROLLBACK WORK.
+    ENDIF.
+
+    MODIFY zmm_tptrf FROM TABLE i_tpf2.
+    IF sy-subrc EQ 0.
+      COMMIT WORK.
+    ELSE.
+      ROLLBACK WORK.
+    ENDIF.
+
+  ENDIF.
+*End Thanawut
+ENDFORM.                    " insert_db
+
+*&---------------------------------------------------------------------*
+*&      Form  SEND_MAIL
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM send_mail.
+
+  DATA: BEGIN OF t_user OCCURS 0,
+           bname LIKE usr01-bname,
+         END OF t_user.
+  DATA: i_extaddr TYPE TABLE OF solisti1 WITH HEADER LINE,
+        i_sapaddr TYPE TABLE OF solisti1 WITH HEADER LINE,
+        i_content TYPE TABLE OF solisti1 WITH HEADER LINE.
+  DATA: i_return  TYPE TABLE OF bapiret2 WITH HEADER LINE,
+        lv_subject(255),
+        lv_date(10),
+        lv_time(8).
+
+  CONCATENATE sy-datum+6(2) '.' sy-datum+4(2) '.' sy-datum+0(4)
+        INTO lv_date.
+  CONCATENATE sy-uzeit+0(2) ':' sy-uzeit+2(2) ':' sy-uzeit+4(2)
+        INTO lv_time.
+  CONCATENATE 'SAP Interface' p_bukrs c_event 'ข้อมูลใบเที่ยว'
+              lv_date lv_time
+        INTO lv_subject SEPARATED BY space.
+
+*---------------------------------------------------------------------
+*>>   SEND SAP MAIL
+*---------------------------------------------------------------------
+  mail[] = i_mail[].
+  SELECT * INTO CORRESPONDING FIELDS OF TABLE t_user
+               FROM usr01 WHERE bname IN p_mail.
+  LOOP AT t_user.
+    PERFORM notify_user
+                USING
+                   lv_subject
+                   t_user-bname.
+  ENDLOOP.
+
+*---------------------------------------------------------------------
+*>>   SEND INTERNET MAIL
+*---------------------------------------------------------------------
+  IF NOT p_exmail[] IS INITIAL.
+
+    CLEAR i_extaddr[].
+    CLEAR i_sapaddr[].
+    i_sapaddr-line = sy-uname.
+    APPEND i_sapaddr.
+
+    LOOP AT p_exmail.
+      i_extaddr-line = p_exmail-low.
+      APPEND i_extaddr.
+    ENDLOOP.
+
+    i_content[] = i_mail[].
+    CALL FUNCTION 'ZGS_MAIL'
+      EXPORTING
+        subject     = lv_subject
+      TABLES
+        ext_address = i_extaddr
+        sap_address = i_sapaddr
+        content     = i_content
+        return      = i_return.
+
+  ENDIF.
+ENDFORM.                    " SEND_MAIL
+*&---------------------------------------------------------------------*
+*&      Form  gen_mail
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM gen_mail.
+  DATA: lv_num TYPE i,
+        lv_line(150),
+        lv_count TYPE i.
+
+  DO 150 TIMES.
+    CONCATENATE lv_line '-' INTO lv_line.
+  ENDDO.
+
+  DESCRIBE TABLE i_mail LINES lv_num.
+  IF lv_num = 0.
+    CLEAR i_mail.
+    i_mail-line+1(15) = 'PROGRAM     : '.
+    i_mail-line+16(50) = sy-repid.
+    APPEND i_mail.
+
+    CLEAR i_mail.
+    i_mail-line+1(15) = 'DATE / TIME : '.
+    i_mail-line+16(10) = sy-datum.
+    i_mail-line+26(10) = sy-uzeit.
+    APPEND i_mail.
+
+    CLEAR i_mail.
+    i_mail-line+1(15) = 'RUN BY      : '.
+    i_mail-line+16(10) = sy-uname.
+    APPEND i_mail.
+
+    CLEAR i_mail.
+    i_mail-line+1(15) = 'FILE NAME   : '.
+    i_mail-line+16(99) = t_path.
+    APPEND i_mail.
+  ENDIF.
+
+  CLEAR i_mail.
+  i_mail-line = lv_line.
+  APPEND i_mail.
+
+  CLEAR i_mail.
+  APPEND i_mail.
+
+  IF err_flag = '0'.
+
+    CLEAR i_mail.
+    i_mail-line+1(30) = 'Total Success Transfer : '.
+    i_mail-line+31(10) = count_succ.
+    APPEND i_mail.
+*Begin Thanawut
+    CLEAR i_mail.
+    i_mail-line+1(30) = 'Total Update Transfer   : '.
+    i_mail-line+31(10) = count_dup.
+    APPEND i_mail.
+*End Thanawut
+    CLEAR i_mail.
+    i_mail-line+1(30) = 'Total Error Transfer   : '.
+    i_mail-line+31(10) = count_fail.
+    APPEND i_mail.
+
+    CLEAR i_mail.
+    APPEND i_mail.
+
+    CLEAR i_mail.
+    i_mail-line+1(99) = file.
+    APPEND i_mail.
+*Begin Thanawut
+    IF ( count_succ GT 0 ) OR ( count_dup GT 0 ) AND ( count_fail EQ 0 ).
+      CLEAR i_mail.
+      i_mail-line+1(20) = '** Success **'.
+      APPEND i_mail.
+
+*    ELSEIF ( count_succ EQ 0 ) OR ( count_dup EQ 0 ) AND ( count_fail EQ 0 ).
+*      CLEAR i_mail.
+*      i_mail-line+1(20) = '** Failed **'.
+*      APPEND i_mail.
+*End Thanawut
+      READ TABLE itab INDEX 1.
+      CLEAR i_mail.
+      i_mail-line+1(50) = i_tab-line.
+      APPEND i_mail.
+
+    ELSEIF count_fail GT 0.
+      CLEAR i_mail.
+      i_mail-line+1(20) = '** Failed **'.
+      APPEND i_mail.
+
+      CLEAR i_mail.
+      i_mail-line+0(5) = 'NO.'.
+      i_mail-line+6(5) = 'W/H'.
+      i_mail-line+11(11) = 'Transport'.
+      i_mail-line+22(11) = 'Deliv.date'.
+      i_mail-line+33(11) = 'Transfer'.
+      i_mail-line+44(11) = 'CCtr.'.
+      i_mail-line+55(5) = 'Typ'.
+      i_mail-line+60(5) = 'Matc'.
+      i_mail-line+65(12) = 'Vendor'.
+      i_mail-line+77(6) = 'Car'.
+      i_mail-line+83(30) = 'Message'.
+      APPEND i_mail.
+
+      LOOP AT i_chk WHERE zflag <> 'X'.
+        CLEAR i_mail.
+        lv_count = lv_count + 1.
+        i_mail-line+1(5) = lv_count.
+        i_mail-line+6(5) = i_chk-zwhid.
+        i_mail-line+11(11) = i_chk-ztrsn.
+        i_mail-line+22(11) = i_chk-zdeld.
+        i_mail-line+33(11) = i_chk-ztrfn.
+        i_mail-line+44(11) = i_chk-kostl.
+        i_mail-line+55(5) = i_chk-ztrst.
+        i_mail-line+60(5) = i_chk-zmatt.
+        i_mail-line+65(12) = i_chk-lifnr.
+        i_mail-line+77(6) = i_chk-zcart.
+        i_mail-line+83(30) = i_chk-zmesg.
+        APPEND i_mail.
+      ENDLOOP.
+    ENDIF.
+  ELSEIF err_flag = '1'.
+    CLEAR i_mail.
+    i_mail-line+1(99) = file.
+    APPEND i_mail.
+
+    CLEAR i_mail.
+    i_mail-line = '** Failed **'.
+    APPEND i_mail.
+
+    CLEAR i_mail.
+    i_mail-line = 'Error! File permission failed'.
+    APPEND i_mail.
+  ELSE.
+
+    CLEAR i_mail.
+    i_mail-line = '** Failed **'.
+    APPEND i_mail.
+
+    CLEAR i_mail.
+    i_mail-line = 'Error! File not found'.
+    APPEND i_mail.
+  ENDIF.
+
+ENDFORM.                    " gen_mail
+*&---------------------------------------------------------------------*
+*&      Form  get_vendor
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM get_vendor USING p_term2
+                CHANGING p_lifnr.
+
+  DATA: wa_vendor LIKE LINE OF i_vendor.
+
+  READ TABLE i_vendor INTO wa_vendor
+                      WITH KEY sort2 = p_term2
+                      BINARY SEARCH.
+  IF sy-subrc EQ 0.
+    p_lifnr = wa_vendor-lifnr.
+  ELSE.
+    p_lifnr = ''.
+  ENDIF.
+
+ENDFORM.                    " get_vendor
+*&---------------------------------------------------------------------*
+*&      Form  exist_costcenter
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM exist_costcenter USING p_kostl
+                      CHANGING p_err.
+
+  DATA: lv_stras(4). "street
+  DATA: lv_pstlz  LIKE csks-pstlz. "Postal Code
+  CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'
+    EXPORTING
+      input  = p_kostl
+    IMPORTING
+      output = lv_stras.
+
+  READ TABLE i_cost WITH KEY stras = lv_stras.
+  IF sy-subrc NE 0.
+
+    READ TABLE i_cost WITH KEY pstlz = p_kostl.
+    IF sy-subrc NE 0.
+      p_err = 'X'.
+    ENDIF.
+  ENDIF.
+
+ENDFORM.                    " exist_costcenter
+*&---------------------------------------------------------------------*
+*&      Form  load_master
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM load_master.
+*>>Vendor Search term 2
+  SELECT lifnr sort2
+  INTO CORRESPONDING FIELDS OF TABLE i_vendor
+  FROM lfa1
+  JOIN adrc ON lfa1~adrnr = adrc~addrnumber
+    WHERE adrc~sort2 NE ''.
+
+*>>Cost Center
+*  SELECT kostl stras pstlz
+*  INTO CORRESPONDING FIELDS OF TABLE i_cost
+*    FROM csks
+*    WHERE  bukrs EQ p_bukrs
+*    AND    kokrs EQ p_bukrs
+*    AND    datbi EQ '99991231'  "Valid to date
+*    AND    stras NE ''          "street
+*    OR     pstlz NE ''.         "Postal Code
+
+*>>Warehouse
+  SELECT branch
+  INTO CORRESPONDING FIELDS OF TABLE i_branch
+          FROM j_1bbranch
+          WHERE bukrs  EQ p_bukrs.
+
+ENDFORM.                    " load_master
+*&---------------------------------------------------------------------*
+*&      Form  get_warehouse
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM get_warehouse USING p_zwhid
+                   CHANGING p_err.
+
+  READ TABLE i_branch WITH KEY branch = p_zwhid
+                      BINARY SEARCH.
+  IF sy-subrc NE 0.
+    p_err = 'X'.
+  ENDIF.
+
+
+ENDFORM.                    " get_warehouse
