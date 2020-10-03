@@ -1,0 +1,5385 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel">
+ <TEST_REPORT>
+  <Author>GS-MM6</Author>
+ </TEST_REPORT>
+ <Styles>
+  <Style ss:ID="Header">
+   <Font ss:Bold="1"/>
+   <Interior ss:Color="#E6EE9C" ss:Pattern="Solid"/>
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="Data">
+   <Interior ss:Color="#FAFAFA" ss:Pattern="Solid"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="BOM">
+  <Table x:FullColumns="1" x:FullRows="1">
+   <Column ss:Width="50"/>
+   <Column ss:Width="50"/>
+   <Column ss:Width="50"/>
+   <Column ss:Width="30"/>
+   <Column ss:Width="150"/>
+   <Column ss:Width="200"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="30"/>
+   <Column ss:Width="120"/>
+   <Column ss:Width="120"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="200"/>
+   <Column ss:Width="150"/>
+   <Column ss:Width="200"/>
+   <Column ss:Width="30"/>
+   <Column ss:Width="80"/>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Running No.</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Level.</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Factory Plant</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Material Type</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Material Finished Goods</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Material Description</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Quantity</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Unit</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Process Order</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Batch Finished Goods</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Date of Manufacture</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Shelf Life Expiration or Best Before Date</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">System Date</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">System Time</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Main Material</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Main Material Description</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Material Raw</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Material Raw Description</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Flag E/F</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Batch Raw Material</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60000047</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แผ่นPolycell 240 X 455mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60009841</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กล่องMaster,Vegetable SPR (RSPO)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60006560</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถุง mLLDPE,115 x175 mm, Plain (mA)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200504</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60002184</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เทป OPP สีเขียวใส 2 (50Y)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200305</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80309721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Vegetable Spring Roll 20 g wip Bulk</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2004302A9</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60000047</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แผ่นPolycell 240 X 455mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200422</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80300721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Vegetable Spring Roll 20 g Ex.41801 (CPK</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A8</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80300721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Vegetable Spring Roll 20 g Ex.41801 (CPK</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80300721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Vegetable Spring Roll 20 g Ex.41801 (CPK</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70900222</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำมันปาล์ม RSPO (MB) และ Low GE</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200404</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80300721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Vegetable Spring Roll 20 g Ex.41801 (CPK</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80300721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Vegetable Spring Roll 20 g Ex.41801 (CPK</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80800556</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แป้งสูตรเพิ่มข้าวเจ้า15x15cm.8-9gเครื่อง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80307721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80306721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-E</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80308721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80200133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Plum Sauce (สำหรับผัดไส้) Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80305721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-D</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71003031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงหั่นสีเหลี่ยม 5 *5 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ บด1-2 มม.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71009008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมหั่นท่อน 2-3 มม.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71009008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมหั่นท่อน 2-3 มม.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71022014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอทไม่ปอกหั่นเส้น ก2-3mmย4-5cmห1-2mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">E</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71022014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอทไม่ปอกหั่นเส้น ก2-3mmย4-5cmห1-2mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">E</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71024003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี หั่นเส้นกว้าง 8-10 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71003031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงหั่นสีเหลี่ยม 5 *5 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71003031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงหั่นสีเหลี่ยม 5 *5 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71101158</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แห้วกระป๋องตราSNOWHOUSE หั่นเต๋า5x5x5.mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก Chill</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71005013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ขิงบด 1-2 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80304721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-C</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80303721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-B</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71101158</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แห้วกระป๋องตราSNOWHOUSE หั่นเต๋า5x5x5.mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80301721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ไส้Vegetable Spring Roll 20 g Ex.41801</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80302721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">3 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80800008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แป้งกาว สูตร A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80801008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41225 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">E</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71003031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงหั่นสีเหลี่ยม 5 *5 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71001031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงตัดแต่ง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71003031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงหั่นสีเหลี่ยม 5 *5 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71001031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงตัดแต่ง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71003031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงหั่นสีเหลี่ยม 5 *5 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71001031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงตัดแต่ง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก Chill</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก(ปลอดสาร)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429/117</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก Chill</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก(ปลอดสาร)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428/117</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71005013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ขิงบด 1-2 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ขิงสดตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428/679</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71005013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ขิงบด 1-2 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ขิงสดตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429/679</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ บด1-2 มม.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ตัดแต่ง ( ซื้อ)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429/392</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ บด1-2 มม.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ตัดแต่ง ( ซื้อ)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428/392</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ บด1-2 มม.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ตัดแต่ง ( ซื้อ)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430/392</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71009008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมหั่นท่อน 2-3 มม.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428/009</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71009008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมหั่นท่อน 2-3 มม.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429/009</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71022014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอทไม่ปอกหั่นเส้น ก2-3mmย4-5cmห1-2mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71037014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอท(ส่งออก)ไม่ปลอกเปลือกตัดหัวท้ายซื้อ</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428/131</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71022014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอทไม่ปอกหั่นเส้น ก2-3mmย4-5cmห1-2mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71037014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอท(ส่งออก)ไม่ปลอกเปลือกตัดหัวท้ายซื้อ</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429/131</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71024003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี หั่นเส้นกว้าง 8-10 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลีตัดแต่ง (Made or buy)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71024003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี หั่นเส้นกว้าง 8-10 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลีตัดแต่ง (Made or buy)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71024003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี หั่นเส้นกว้าง 8-10 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลีตัดแต่ง (Made or buy)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71024003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี หั่นเส้นกว้าง 8-10 mm.</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลีตัดแต่ง (Made or buy)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71101158</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แห้วกระป๋องตราSNOWHOUSE หั่นเต๋า5x5x5.mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71100158</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แห้วกระป๋อง ตรา SNOWHOUSE</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200303</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71101158</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แห้วกระป๋องตราSNOWHOUSE หั่นเต๋า5x5x5.mm</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71100158</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แห้วกระป๋อง ตรา SNOWHOUSE</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80303721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-B</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71300050</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Johin Chinese Soy Sauce(Clean Dec)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200302</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80304721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-C</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70900051</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำมันงา 100% (พิเศษ) ม้ามังกร</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200409</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80305721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-D</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71400004</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกไทยขาวป่น100%</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200427</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80305721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-D</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70600013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เกลือป่น Non Anticaking (25 กก./ถุง)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200402</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80306721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-E</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71300073</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำส้มสายชูหมัก 4.2%</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200424</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80307721</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41801-F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71400185</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Shichimi Togarashi(พริกญี่ปุ่นปรุงรส)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200207</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80800183</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แป้งปอเปี๊ยะแป้งข้าวเจ้าEX. 41287</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80801183</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41287-A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80800183</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แป้งปอเปี๊ยะแป้งข้าวเจ้าEX. 41287</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80802183</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41287-B</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80800183</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แป้งปอเปี๊ยะแป้งข้าวเจ้าEX. 41287</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70500026</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แป้งข้าวเจ้า(ช้างสามเศียร)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200303</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80801008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">EX.41225 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70500018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แป้งสาลีตราหัวกวาง(ไม่ฟอกสี)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200403</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71001031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงตัดแต่ง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428/265</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71001031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดงตัดแต่ง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429/265</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลีตัดแต่ง (Made or buy)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200427/131</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลีตัดแต่ง (Made or buy)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200428/131</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลีตัดแต่ง (Made or buy)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429/131</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71100160</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">บ๊วยดองบด (เกลือ 18%)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80203133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - B</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80202133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80204133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - C</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80204133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - C</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80204133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - C</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80202133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80203133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - B</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430101</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80203133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - B</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80201133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำซอส Plum Sauce(สำหรับผัดไส้)Ex.44152</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80202133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String"/>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200430201</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">6 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80202133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70600002</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำตาลทราย</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200427</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">6 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80202133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70600002</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">น้ำตาลทราย</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200424</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">6 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80202133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60000005</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถุงพลาสติกHDPE ใส่งานระหว่างทำ (C)11X17</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200406</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">6 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80202133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60000127</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กล่อง PLAIN (A)  กล่องแป้งปอเปี๊ยะ Plain</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200429</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">6 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80202133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - A</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60000395</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เทป OPP ใส 2(50Y)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200421</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">6 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ZFG1</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">90141894</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">4 Vegetable Spring Rolls 20 g, kerry 14</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">CAS</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">1300263920</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">63121A9</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2021.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2020.05.05</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05:20:07</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">80204133</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">Ex.44152 - C</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70500064</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แป้ง Novation 2300 ( Corn Starch )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">F</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200408</Data>
+    </Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
+            

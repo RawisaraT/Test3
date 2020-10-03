@@ -1,0 +1,1320 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel">
+ <TEST_REPORT>
+  <Author>GS-MM4</Author>
+ </TEST_REPORT>
+ <Styles>
+  <Style ss:ID="Header">
+   <Font ss:Bold="1"/>
+   <Interior ss:Color="#E6EE9C" ss:Pattern="Solid"/>
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="Data">
+   <Interior ss:Color="#FAFAFA" ss:Pattern="Solid"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Raw material">
+  <Table x:FullColumns="1" x:FullRows="1">
+   <Column ss:Width="50"/>
+   <Column ss:Width="50"/>
+   <Column ss:Width="50"/>
+   <Column ss:Width="100"/>
+   <Column ss:Width="150"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="30"/>
+   <Column ss:Width="120"/>
+   <Column ss:Width="120"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="200"/>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Running No.</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Plant</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Material no.</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Material Description</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Batch</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Stock type</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Quantity</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Unit</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Goods receive date</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Date of manufacture</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Shelf Life Expiration or Best Before Date</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Vendor code</Data>
+    </Cell>
+    <Cell ss:StyleID="Header">
+     <Data ss:Type="String">Vendor name</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0001</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">170516N267</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">600.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000190267</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ธัญพิสิษฐุ์  เกตุไพบูลย์</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0002</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">170515</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">2300.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000190267</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ธัญพิสิษฐุ์  เกตุไพบูลย์</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">170515/679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">500.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000165679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เฮลท์แคร์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0004</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">170515/267</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">500.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000190267</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ธัญพิสิษฐุ์  เกตุไพบูลย์</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0005</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190515/131</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">100.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000197131</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ฟาร์มสำเร็จ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0006</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">180531/131</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">300.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">31.05.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.06.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000197131</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ฟาร์มสำเร็จ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0007</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000003</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กะหล่ำปลี</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">170515N267</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">150.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">14.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">19.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000190267</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ธัญพิสิษฐุ์  เกตุไพบูลย์</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก(ปลอดสาร)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190517/117</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">107.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">17.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">19.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000159117</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">มาลี  ชาญวิญญู</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก(ปลอดสาร)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190515/117</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">110.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">17.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000159117</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">มาลี  ชาญวิญญู</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0010</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก(ปลอดสาร)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">180531/117</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">400.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">31.05.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">02.06.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000159117</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">มาลี  ชาญวิญญู</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0011</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ถั่วงอก(ปลอดสาร)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">160516N117</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">400.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">16.05.2016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000159117</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">มาลี  ชาญวิญญู</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0012</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190515/265</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">160.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000148265</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พีดีเอส ฟู๊ดส์ บจ.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71000031</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พริกหวานแดง</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">160516N265</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">500.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000148265</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พีดีเอส ฟู๊ดส์ บจ.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200505/009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">60000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">08.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000187009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ทวีทรัพย์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0015</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190515/392</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">50000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">18.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000178392</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เอสพีเค โฟรเซ็น โปรดักส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">180531/009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">130000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">31.05.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">03.06.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000187009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ทวีทรัพย์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">170514/679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">150000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">14.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">17.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000165679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เฮลท์แคร์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190515/009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">150000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">18.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000187009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ทวีทรัพย์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">160515/679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">18.05.2016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000165679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เฮลท์แคร์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">170515/679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">140000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">18.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000165679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เฮลท์แคร์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0021</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004008</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ต้นหอมตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">160516N009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">300000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">18.05.2016</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000187009</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ทวีทรัพย์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0022</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ตัดแต่ง ( ซื้อ)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">180531/392</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">350000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">31.05.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.06.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000178392</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เอสพีเค โฟรเซ็น โปรดักส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0023</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71004036</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">กระเทียมกลีบใหญ่ตัดแต่ง ( ซื้อ)</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190515/392</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">130000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000178392</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เอสพีเค โฟรเซ็น โปรดักส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0024</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ขิงสดตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190515/679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">70000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000165679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เฮลท์แคร์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0025</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ขิงสดตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">170515/679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">50000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2017</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000165679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เฮลท์แคร์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0026</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71006013</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ขิงสดตัดแต่ง ( ซื้อ )</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200505/679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">5000.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">G</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">10.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000165679</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">เฮลท์แคร์ ฟู้ดส์ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0027</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71037014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอท(ส่งออก)ไม่ปลอกเปลือกตัดหัวท้ายซื้อ</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">190515/131</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">300.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">15.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">20.05.2019</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000197131</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ฟาร์มสำเร็จ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0028</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71037014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอท(ส่งออก)ไม่ปลอกเปลือกตัดหัวท้ายซื้อ</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">200505/131</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">40.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">10.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000197131</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">ฟาร์มสำเร็จ บจก.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0029</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71037014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอท(ส่งออก)ไม่ปลอกเปลือกตัดหัวท้ายซื้อ</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">180531/265</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">400.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">31.05.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.06.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000148265</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พีดีเอส ฟู๊ดส์ บจ.</Data>
+    </Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0030</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0401</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">71037014</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">แครอท(ส่งออก)ไม่ปลอกเปลือกตัดหัวท้ายซื้อ</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">180531/265</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">QI</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">400.000 </Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">KG</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.05.2020</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">31.05.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">05.06.2018</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">0000148265</Data>
+    </Cell>
+    <Cell ss:StyleID="Data">
+     <Data ss:Type="String">พีดีเอส ฟู๊ดส์ บจ.</Data>
+    </Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
+                                                                                                                                                                   
